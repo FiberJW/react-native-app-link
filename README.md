@@ -1,5 +1,5 @@
 # React Native App Link
-Easily link to other apps in React Native.
+Easily link to other apps in React Native. If the app isn't installed on the user's phone, open the App Store or Play Store link instead.
 
 ## Installation:
 
