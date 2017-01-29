@@ -27,7 +27,7 @@ AppLink.openInStore(appStoreId, playStoreId).then(() => {
 
 ## API:
 
-### `maybeOpenURL(url, config)`: Opens link if app is present. If not, it opens an app store to prompt the user to download it. 
+### `maybeOpenURL(url, config)` Opens link if app is present. If not, it opens an app store to prompt the user to download it. 
 
 `url`: (String) a url that points to the content you want to open.
 
@@ -41,7 +41,7 @@ AppLink.openInStore(appStoreId, playStoreId).then(() => {
 
 ---
 
-### `openInStore(appStoreId, playStoreId)`: Opens an app store to the listing requested. 
+### `openInStore(appStoreId, playStoreId)` Opens an app store to the listing requested. 
 
 `appStoreId`: (String) the app's ID on the App Store (iOS). Example: `'id529379082'`
 
