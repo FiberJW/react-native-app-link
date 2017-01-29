@@ -1,0 +1,27 @@
+{
+  "name": "react-native-app-link",
+  "version": "0.0.0",
+  "description": "Easily link to other apps with React Native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datwheat/react-native-app-link.git"
+  },
+  "keywords": [
+    "React",
+    "Native",
+    "js"
+  ],
+  "author": "Juwan Wheatley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/datwheat/react-native-app-link/issues"
+  },
+  "homepage": "https://github.com/datwheat/react-native-app-link#readme",
+  "dependencies": {
+    "react-native": "^0.40.0"
+  }
+}
