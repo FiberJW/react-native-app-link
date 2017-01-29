@@ -1,6 +1,10 @@
 # React Native App Link
 Easily link to other apps in React Native. If the app isn't installed on the user's phone, open the App Store or Play Store link instead.
 
+[![NPM](https://nodei.co/npm/react-native-app-link.png)](https://nodei.co/npm/react-native-app-link/)
+
+[![npm](https://img.shields.io/npm/l/react-native-app-link.svg)]()
+
 ## Installation:
 
 `npm i -S react-native-app-link`
