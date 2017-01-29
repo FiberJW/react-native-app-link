@@ -10,7 +10,7 @@ Easily link to other apps in React Native. If the app isn't installed on the use
 ```javascript
 import AppLink from 'react-native-app-link';
 
-AppLink.maybeOpenURL(url, { appName, appStoreUrl, playStoreUrl }).then(() => {
+AppLink.maybeOpenURL(url, { appName, appStoreId, playStoreId }).then(() => {
   // do stuff
 })
 .catch((err) => {
@@ -28,9 +28,9 @@ AppLink.maybeOpenURL(url, { appName, appStoreUrl, playStoreUrl }).then(() => {
 
 `config.appName`: (String) the app's name you're linking into.
 
-`config.appStoreUrl`: (String) the link to the app's listing on the App Store (iOS).
+`config.appStoreId`: (String) the app's ID on the App Store (iOS). Example: `{ appStoreId: 'id529379082' }`
 
-`config.playStoreUrl`: (String) the link to the app's listing on the Play Store (Android).
+`config.playStoreId`: (String) the app's package identifier on the Play Store (Android). Example: `{ playStoreId: 'me.lyft.android' }`
 
 ---
 

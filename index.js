@@ -3,13 +3,13 @@ import {
   Platform
 } from 'react-native'
 
-export const maybeOpenURL = async (url, { appName, appStoreUrl, playStoreUrl }) => {
+export const maybeOpenURL = async (url, { appName, appStoreId, playStoreId }) => {
   Linking.openURL(url).catch(err => {
     if (err.code === 'EUNSPECIFIED') {
       if (Platform.OS === 'ios') {
-        Linking.openURL(appStoreUrl)
+        Linking.openURL(`https://itunes.apple.com/us/app/${appStoreId}`)
       } else {
-        Linking.openURL(playStoreUrl)
+        Linking.openURL(`https://play.google.com/store/apps/details?id={playStoreId}`)
       }
     } else {
       throw new Error(`Could not open ${appName}. ${err.toString()}`)
