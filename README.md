@@ -16,11 +16,18 @@ AppLink.maybeOpenURL(url, { appName, appStoreId, playStoreId }).then(() => {
 .catch((err) => {
   // handle error
 });
+
+AppLink.openInStore(appStoreId, playStoreId).then(() => {
+  // do stuff
+})
+.catch((err) => {
+  // handle error
+});
 ```
 
 ## API:
 
-`maybeOpenURL(url, config)`
+### `maybeOpenURL(url, config)`: Opens link if app is present. If not, it opens an app store to prompt the user to download it. 
 
 `url`: (String) a url that points to the content you want to open.
 
@@ -34,4 +41,12 @@ AppLink.maybeOpenURL(url, { appName, appStoreId, playStoreId }).then(() => {
 
 ---
 
-If there are any issues file an issue above and don't hesitate to spin up a PR and contribute!
+### `openInStore(appStoreId, playStoreId)`: Opens an app store to the listing requested. 
+
+`appStoreId`: (String) the app's ID on the App Store (iOS). Example: `'id529379082'`
+
+`playStoreId`: (String) the app's package identifier on the Play Store (Android). Example: `'me.lyft.android'`
+
+
+
+> If there are any issues file an issue above and don't hesitate to spin up a PR and contribute!
