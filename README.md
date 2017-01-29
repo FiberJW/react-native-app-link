@@ -1,11 +1,11 @@
 # React Native App Link
 Easily link to other apps in React Native.
 
-Installation:
+## Installation:
 
 `npm i -S react-native-app-link`
 
-Usage:
+## Usage:
 
 ```javascript
 import AppLink from 'react-native-app-link';
@@ -18,7 +18,7 @@ AppLink.maybeOpenURL(url, { appName, appStoreUrl, playStoreUrl }).then(() => {
 });
 ```
 
-API:
+## API:
 
 `maybeOpenURL(url, config)`
 
