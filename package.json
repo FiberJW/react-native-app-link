@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "description": "Easily link to other apps with React Native.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/datwheat/react-native-app-link.git"
+  },
+  "scripts": {
+    "test": "eslint ."
   },
   "keywords": [
     "React",
@@ -23,5 +23,11 @@
   "homepage": "https://github.com/datwheat/react-native-app-link#readme",
   "dependencies": {
     "react-native": "^0.40.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
   }
 }
