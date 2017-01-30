@@ -3,8 +3,6 @@ Easily link to other apps in React Native. If the app isn't installed on the use
 
 [![NPM](https://nodei.co/npm/react-native-app-link.png)](https://nodei.co/npm/react-native-app-link/)
 
-[![npm](https://img.shields.io/npm/l/react-native-app-link.svg)]()
-
 ![Example GIF](https://media.giphy.com/media/BZGQdKBEeHqs8/giphy.gif)
 
 ## Installation:
