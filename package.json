@@ -21,9 +21,7 @@
     "url": "https://github.com/datwheat/react-native-app-link/issues"
   },
   "homepage": "https://github.com/datwheat/react-native-app-link#readme",
-  "dependencies": {
-    "react-native": "^0.40.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^3.14.1",
     "eslint-config-standard": "^6.2.1",
