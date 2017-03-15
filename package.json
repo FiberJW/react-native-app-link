@@ -8,13 +8,20 @@
     "url": "git+https://github.com/datwheat/react-native-app-link.git"
   },
   "scripts": {
-    "test": "eslint ."
+    "lint:staged": "lint-staged",
+    "precommit": "npm run lint:staged"
   },
   "keywords": [
     "React",
     "Native",
     "js"
   ],
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --trailing-comma es5 ",
+      "git add"
+    ]
+  },
   "author": "Juwan Wheatley",
   "license": "MIT",
   "bugs": {
@@ -23,9 +30,8 @@
   "homepage": "https://github.com/datwheat/react-native-app-link#readme",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^3.14.1",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1"
+    "husky": "^0.13.1",
+    "lint-staged": "^3.3.1",
+    "prettier": "^0.20.0"
   }
 }
