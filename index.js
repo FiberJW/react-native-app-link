@@ -2,12 +2,16 @@ import { Linking, Platform } from 'react-native';
 
 export const maybeOpenURL = async (
   url,
-  { appName, appStoreId, playStoreId }
+  { appName, appStoreId, appStoreLocale, playStoreId }
 ) => {
   Linking.openURL(url).catch(err => {
     if (err.code === 'EUNSPECIFIED') {
       if (Platform.OS === 'ios') {
-        Linking.openURL(`https://itunes.apple.com/us/app/${appStoreId}`);
+        
+        // check if appStoreLocale is set
+        const locale = typeof appStoreLocale === 'undefined' ? 'us' : appStoreLocale;
+        
+        Linking.openURL(`https://itunes.apple.com/${locale}/app/${appStoreId}`);
       } else {
         Linking.openURL(
           `https://play.google.com/store/apps/details?id=${playStoreId}`
