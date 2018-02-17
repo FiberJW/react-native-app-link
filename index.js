@@ -7,10 +7,11 @@ export const maybeOpenURL = async (
   Linking.openURL(url).catch(err => {
     if (err.code === 'EUNSPECIFIED') {
       if (Platform.OS === 'ios') {
-        
         // check if appStoreLocale is set
-        const locale = typeof appStoreLocale === 'undefined' ? 'us' : appStoreLocale;
-        
+        const locale = typeof appStoreLocale === 'undefined'
+          ? 'us'
+          : appStoreLocale;
+
         Linking.openURL(`https://itunes.apple.com/${locale}/app/${appStoreId}`);
       } else {
         Linking.openURL(
