@@ -1,5 +1,5 @@
 # React Native App Link
-Easily link to other apps in React Native. If the app isn't installed on the user's phone, open the App Store or Play Store link instead.
+Easily [deep link](https://en.wikipedia.org/wiki/Mobile_deep_linking) to other apps in React Native. If the app isn't installed on the user's phone, open the App Store or Play Store link instead.
 
 ![Example GIF](https://media.giphy.com/media/BZGQdKBEeHqs8/giphy.gif)
 
@@ -31,7 +31,7 @@ AppLink.openInStore(appStoreId, playStoreId).then(() => {
 
 ### `maybeOpenURL(url, config) -> Promise` Opens link if app is present. If not, it opens an app store to prompt the user to download it. 
 
-`url`: (String) a url that points to the content you want to open.
+`url`: (String) a url in the specified app's [deep linking](https://en.wikipedia.org/wiki/Mobile_deep_linking) format that points to the content you want to open.
 
 `config`: (Object) a set of fallback urls if the app requested does not exist locally.
 
