@@ -24,9 +24,9 @@ export const maybeOpenURL = async (
   });
 };
 
-export const openInStore = async (appStoreId, playStoreId) => {
+export const openInStore = async ({ appName, appStoreId, appStoreLocale = 'us', playStoreId }) => {
   if (Platform.OS === 'ios') {
-    Linking.openURL(`https://itunes.apple.com/us/app/${appName}/id${appStoreId}`);
+    Linking.openURL(`https://itunes.apple.com/${appStoreLocale}/app/${appName}/id${appStoreId}`);
   } else {
     Linking.openURL(
       `https://play.google.com/store/apps/details?id=${playStoreId}`
