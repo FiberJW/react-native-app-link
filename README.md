@@ -1,7 +1,30 @@
-# React Native App Link
-Easily [deep link](https://en.wikipedia.org/wiki/Mobile_deep_linking) to other apps in React Native. If the app isn't installed on the user's phone, open the App Store or Play Store link instead.
+<p align="center">
+  <img alt="Logo" src="./react-native-app-link.png" width="256">
+</p>
+
+<h3 align="center" style="font-weight:600">
+  react-native-app-link
+</h3>
+
+<p align="center">
+Easily <a href="https://en.wikipedia.org/wiki/Mobile_deep_linking">deep link</a> to other apps in React Native. If the app isn't installed on the user's phone, open the App Store or Play Store link instead.
+</p>
+
+---
+
+<div align="center">
+
+[![NPM version badge](https://img.shields.io/npm/v/react-native-app-link.svg)](https://www.npmjs.com/package/react-native-app-link)
+
+</div>
+
+
+<div align="center">
 
 ![Example GIF](https://media.giphy.com/media/BZGQdKBEeHqs8/giphy.gif)
+
+</div>
+
 
 ## Installation:
 
