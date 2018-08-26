@@ -1,6 +1,6 @@
 {
   "name": "react-native-app-link",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "description": "Easily link to other apps with React Native.",
   "main": "index.js",
   "repository": {
