@@ -12,14 +12,14 @@ Easily [deep link](https://en.wikipedia.org/wiki/Mobile_deep_linking) to other a
 ```javascript
 import AppLink from 'react-native-app-link';
 
-AppLink.maybeOpenURL(url, { appName, appStoreId, playStoreId }).then(() => {
+AppLink.maybeOpenURL(url, { appName, appStoreId, appStoreLocale, playStoreId }).then(() => {
   // do stuff
 })
 .catch((err) => {
   // handle error
 });
 
-AppLink.openInStore(appStoreId, playStoreId).then(() => {
+AppLink.openInStore({ appName, appStoreId, appStoreLocale, playStoreId }).then(() => {
   // do stuff
 })
 .catch((err) => {
@@ -37,7 +37,7 @@ AppLink.openInStore(appStoreId, playStoreId).then(() => {
 
 `config.appName`: (String) the app's name you're linking into.
 
-`config.appStoreId`: (String) the app's ID on the App Store (iOS). Example: `{ appStoreId: 'id529379082' }`
+`config.appStoreId`: (String) the app's ID on the App Store (iOS). Example: `{ appStoreId: '529379082' }`
 
 `config.appStoreLocale`: (String) the App Store's locale (iOS). Defaults to the USA App Store. Example: `{ appStoreId: 'us' }`
 
@@ -45,12 +45,16 @@ AppLink.openInStore(appStoreId, playStoreId).then(() => {
 
 ---
 
-### `openInStore(appStoreId, playStoreId) -> Promise` Opens an app store to the listing requested. 
+### `openInStore(config) -> Promise` Opens an app store to the listing requested. 
 
-`appStoreId`: (String) the app's ID on the App Store (iOS). Example: `'id529379082'`
+`config`: (Object) a config for generate store urls.
 
-`playStoreId`: (String) the app's package identifier on the Play Store (Android). Example: `'me.lyft.android'`
+`config.appName`: (String) the app's name you're linking into.
 
+`config.appStoreId`: (String) the app's ID on the App Store (iOS). Example: `{ appStoreId: '529379082' }`
 
+`config.appStoreLocale`: (String) the App Store's locale (iOS). Defaults to the USA App Store. Example: `{ appStoreId: 'us' }`
+
+`config.playStoreId`: (String) the app's package identifier on the Play Store (Android). Example: `{ playStoreId: 'me.lyft.android' }`
 
 > If there are any issues file an issue above and don't hesitate to spin up a PR and contribute!
