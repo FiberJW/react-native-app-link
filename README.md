@@ -76,7 +76,7 @@ AppLink.openInStore({ appName, appStoreId, appStoreLocale, playStoreId }).then((
 
 `config.appStoreId`: (String) the app's ID on the App Store (iOS). Example: `{ appStoreId: '529379082' }`
 
-`config.appStoreLocale`: (String) the App Store's locale (iOS). Defaults to the USA App Store. Example: `{ appStoreId: 'us' }`
+`config.appStoreLocale`: (String) the App Store's locale (iOS). Defaults to the USA App Store. Example: `{ appStoreLocale: 'us' }`
 
 `config.playStoreId`: (String) the app's package identifier on the Play Store (Android). Example: `{ playStoreId: 'me.lyft.android' }`
 
