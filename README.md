@@ -7,7 +7,7 @@
 </h3>
 
 <p align="center">
-Easily <a href="https://en.wikipedia.org/wiki/Mobile_deep_linking">deep link</a> to other apps in React Native. If the app isn't installed on the user's phone, open the App Store or Play Store link instead.
+Easily <a href="https://en.wikipedia.org/wiki/Mobile_deep_linking">deep link</a> to other apps in React Native. If the app isn't installed on the user's phone, open the App Store, Play Store or AppGallery link instead.
 </p>
 
 ---
@@ -35,14 +35,14 @@ Easily <a href="https://en.wikipedia.org/wiki/Mobile_deep_linking">deep link</a>
 ```javascript
 import AppLink from 'react-native-app-link';
 
-AppLink.maybeOpenURL(url, { appName, appStoreId, appStoreLocale, playStoreId }).then(() => {
+AppLink.maybeOpenURL(url, { appName, appStoreId, appStoreLocale, playStoreId, appGalleryId }).then(() => {
   // do stuff
 })
 .catch((err) => {
   // handle error
 });
 
-AppLink.openInStore({ appName, appStoreId, appStoreLocale, playStoreId }).then(() => {
+AppLink.openInStore({ appName, appStoreId, appStoreLocale, playStoreId, appGalleryId }).then(() => {
   // do stuff
 })
 .catch((err) => {
@@ -52,7 +52,7 @@ AppLink.openInStore({ appName, appStoreId, appStoreLocale, playStoreId }).then((
 
 ## API:
 
-### `maybeOpenURL(url, config) -> Promise` Opens link if app is present. If not, it opens an app store to prompt the user to download it. 
+### `maybeOpenURL(url, config) -> Promise` Opens link if app is present. If not, it opens an app store to prompt the user to download it.
 
 `url`: (String) a url in the specified app's [deep linking](https://en.wikipedia.org/wiki/Mobile_deep_linking) format that points to the content you want to open.
 
@@ -62,13 +62,15 @@ AppLink.openInStore({ appName, appStoreId, appStoreLocale, playStoreId }).then((
 
 `config.appStoreId`: (String) the app's ID on the App Store (iOS). Example: `{ appStoreId: '529379082' }`
 
-`config.appStoreLocale`: (String) the App Store's locale (iOS). Defaults to the USA App Store. Example: `{ appStoreId: 'us' }`
+`config.appStoreLocale`: (String) the App Store's locale (iOS). Defaults to the USA App Store. Example: `{ appStoreLocale: 'us' }`
 
 `config.playStoreId`: (String) the app's package identifier on the Play Store (Android). Example: `{ playStoreId: 'me.lyft.android' }`
 
+`config.appGalleryId`: (String) the app's ID on the AppGallery (Android). Example: `{ appGalleryId: '100170981' }`
+
 ---
 
-### `openInStore(config) -> Promise` Opens an app store to the listing requested. 
+### `openInStore(config) -> Promise` Opens an app store to the listing requested.
 
 `config`: (Object) a config for generate store urls.
 
@@ -79,5 +81,7 @@ AppLink.openInStore({ appName, appStoreId, appStoreLocale, playStoreId }).then((
 `config.appStoreLocale`: (String) the App Store's locale (iOS). Defaults to the USA App Store. Example: `{ appStoreLocale: 'us' }`
 
 `config.playStoreId`: (String) the app's package identifier on the Play Store (Android). Example: `{ playStoreId: 'me.lyft.android' }`
+
+`config.appGalleryId`: (String) the app's ID on the AppGallery (Android). Example: `{ appGalleryId: '100170981' }`
 
 > If there are any issues file an issue above and don't hesitate to spin up a PR and contribute!
