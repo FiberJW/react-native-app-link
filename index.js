@@ -1,6 +1,6 @@
 import { Linking, Platform } from 'react-native';
 
-export const maybeOpenURL = async (
+export const maybeOpenURL = (
   url,
   { appName, appStoreId, appStoreLocale, playStoreId }
 ) => {
@@ -24,7 +24,7 @@ export const maybeOpenURL = async (
   });
 };
 
-export const openInStore = async ({ appName, appStoreId, appStoreLocale = 'us', playStoreId }) => {
+export const openInStore = ({ appName, appStoreId, appStoreLocale = 'us', playStoreId }) => {
   if (Platform.OS === 'ios') {
     Linking.openURL(`https://apps.apple.com/${appStoreLocale}/app/${appName}/id${appStoreId}`);
   } else {
